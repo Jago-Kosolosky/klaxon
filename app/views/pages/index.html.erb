@@ -4,12 +4,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Watching</h1>
+        <h1>Aan het volgen</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-      <p class="lead">Watching an item means that each time it changes, Klaxon will save a version of it, known as a “snapshot.” Below you’ll see all the items and can click to see the latest snapshot.</p>
+      <p class="lead">Een website volgen, betekent dat Klaxon een versie (snapshot) zal opslaan elke keer de pagina wijzigt. Hieronder staan alle opdrachten en kan je de meest recente snapshots bekijken.</p>
       </div>
       <div class="col-md-3">
         <!-- negative space -->
@@ -26,11 +26,11 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Created</th>
-          <th>Name</th>
+          <th>Gemaakt op</th>
+          <th>Naam</th>
           <th>Site</th>
-          <th>Selector</th>
-          <th>Creator</th>
+          <th>CSS-selector</th>
+          <th>Opdrachtgever</th>
           <th></th>
           <th></th>
         </tr>
@@ -43,8 +43,8 @@
           <td><%= page.domain.truncate(40) %></td>
           <td><code><%= page.css_selector %></code></td>
           <td><%= page&.user&.display_name %></td>
-          <td><% if page.page_snapshots.count > 1 %><%= link_to "Latest Change", latest_change_page_path(page), class: "btn btn-default btn-block" %><% end %></td>
-          <td><%= link_to 'Edit', edit_page_path(page), class: "btn btn-default btn-block" %></td>
+          <td><% if page.page_snapshots.count > 1 %><%= link_to "Laatste wijziging", latest_change_page_path(page), class: "btn btn-default btn-block" %><% end %></td>
+          <td><%= link_to 'Aanpassen', edit_page_path(page), class: "btn btn-default btn-block" %></td>
         </tr>
         <% end %>
       </tbody>

@@ -35,13 +35,13 @@
   <div class="container">
     <div class="row klax-spacer-md">
       <div class="col-md-12">
-        <h4>Notifications</h4>
+        <h4>Notificaties</h4>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 klax-spacer-md">
-        <h5>Email Subscriptions</h5>
-        <p>Which users added to Klaxon should get an email when this item changes?</p>
+        <h5>Email</h5>
+        <p>Welke gebruikers moeten een email krijgen als deze site wijzigt?</p>
 
         <% @users.each do |user| %>
           <div class="checkbox">
@@ -55,7 +55,7 @@
       </div>
       <div class="col-md-3 klax-spacer-md">
         <h5>Slack</h5>
-        <p>Which of the Slack channels that you’ve added should get notification when this item changes?</p>
+        <p>Welke kanalen op Slack moeten een melding krijgen als deze site wijzigt?</p>
 
         <% @slack_integrations.each do |slack| %>
           <div class="checkbox">

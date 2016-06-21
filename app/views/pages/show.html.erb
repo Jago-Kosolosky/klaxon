@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Naam:</strong>
   <%= @page.name %>
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>Adres:</strong>
   <%= @page.url %>
 </p>
 
 <p>
-  <strong>Css selector:</strong>
+  <strong>CSS-selector:</strong>
   <%= @page.css_selector %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Opdrachtgever:</strong>
   <%= @page.user_id %>
 </p>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<%= link_to 'Aanpassen', edit_page_path(@page) %> |
+<%= link_to 'Terug', pages_path %>

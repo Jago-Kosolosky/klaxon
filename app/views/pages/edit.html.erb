@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Edit an Item</h1>
+        <h1>Aanpassen</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-      <p class="lead">Watching an item means that each time it changes, Klaxon will save a version of it, known as a “snapshot.”</p>
+      <p class="lead">Een website volgen, betekent dat Klaxon een versie (snapshot) zal opslaan elke keer de pagina wijzigt.</p>
       </div>
       <div class="col-md-6">
         <!-- negative space -->
@@ -22,23 +22,10 @@
   <div class="container">
     <div class="row klax-spacer-md">
       <div class="col-md-12">
-        <h4>Activity</h4>
+        <h4>Activiteiten</h4>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 klax-spacer-md">
-        <h2>TK</h2>
-        <p class="lead">total times the item has changed since you started watching it, which was TK TK <%= @page.created_at.strftime("%A, %B %d, %Y at %H:%M") %>.</p>
-      </div>
-      <div class="col-md-3 klax-spacer-md">
-        <h2>TK%</h2>
-        <p class="lead">is the average amount of the item that changes.</p>
-      </div>
-      <div class="col-md-3 klax-spacer-md">
-        <h2>TK</h2>
-        <!-- <%= @page.snapshot_time_deltas.to_json %><br> --> 
-        <p class="lead">amount of time, roughly, between each change. We anticipate the next change will occur on Xxxxxx.</p>
-      </div>
       <div class="col-md-3 klax-spacer-md">
         <h2><%= time_ago_in_words @page.updated_at %></h2>
         <p class="lead">since the last change was captured at <%= @page.created_at.strftime("%A, %B %d, %Y at %H:%M") %></p>
