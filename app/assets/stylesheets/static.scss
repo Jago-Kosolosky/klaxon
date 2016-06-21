@@ -292,15 +292,20 @@ body{
   background-color: #fffaf4;
   color: #212d5b;
 }
-a.navbar-brand{
+a.navbar-brand, a{
   color: #212d5b;
 }
-li.active{
-  color: #b9c3db;
+a.btn:hover{
+  color: white;
+  background-color: #212d5b;
 }
 .navbar{
-  background-color: #e3d7c4;
+  background-color: #b9c3db;
 }
-*{
+div.jumbotron, a.btn-block, h1, h2, h4{
   border-color: #8FA1CB;
+}
+code{
+  color: #212d5b;
+  background-color: rgba(33, 45, 91, 0.1);
 }
