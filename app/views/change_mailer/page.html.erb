@@ -36,11 +36,11 @@
     <div class="klax-app-name">
     Klaxon
   </div>
-  <h2>Something Changed</h2>
+  <h2>Een pagina die je volgt, is aangepast</h2>
 
-  <p class="klax-lead"><b><%= @page.name %></b> changed. It has changed <b><%= @page.page_snapshots.count %></b> times since Klaxon started monitoring it on <b><%= @page.created_at.strftime("%A, %B %d, %Y") %>.</b></p>
+  <p class="klax-lead"><b><%= @page.name %></b> is aangepast. Het is <b><%= @page.page_snapshots.count %></b> keer aangepast sinds Klaxon de pagina in de gaten begon te houden op <b><%= @page.created_at.strftime("%d/%m/%Y") %>.</b></p>
 
-  <p><a class="klax-button" style="margin-bottom: 50px;" href="<%= page_change_url(@change) %>">View this Snapshot</a></p>
+  <p><a class="klax-button" style="margin-bottom: 50px;" href="<%= page_change_url(@change) %>">Snapshot bekijken</a></p>
 
   <div class="diff">
     <%= raw Diffy::Diff.new(@change.before.match_text, @change.after.match_text, context: 2).to_s(:html_simple) %>

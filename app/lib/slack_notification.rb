@@ -5,7 +5,7 @@ class SlackNotification
     if request.code == 200
       request.body
     else
-      puts "Error sending webhook to url=#{url} for payload=#{payload.to_json}"
+      puts "Fout met de verbinding via url=#{url} voor payload=#{payload.to_json}"
       return false
     end
   end

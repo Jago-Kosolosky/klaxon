@@ -2,20 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Comparing Snapshots</h1>
+        <h1>Snapshots vergelijken</h1>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <p class="lead">Below are two versions of <b><%= @page&.name %></b> which has changed <%= @snapshots&.count %> times since <%= @page.created_at.strftime("%A, %B %d, %Y") %> when <%= @page&.user&.display_name %> began watching it.</p>
+        <p class="lead">Hieronder vind je twee versies van <b><%= @page&.name %></b>, een pagina die ondertussen al <%= @snapshots&.count %> keer veranderd is sinds <%= @page.created_at.strftime("%d/%m/%y") %> toen <%= @page&.user&.display_name %> ze begon te volgen.</p>
       </div>
       <div class="col-md-3">
         <!-- negative space -->
       </div>
       <div class="col-md-3">
-        <%= link_to 'Past Snapshots', snapshots_page_path(@page), class: 'btn btn-default btn-lg btn-block' %>
-        <%= link_to 'Go to Source', @page.url, class: 'btn btn-default btn-lg btn-block' %>
-        <%= link_to 'Edit', edit_page_path(@page), class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to 'Vroegere Snapshots', snapshots_page_path(@page), class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to 'Naar de pagina', @page.url, class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to 'Aanpassen', edit_page_path(@page), class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
   </div><!-- /.container -->
@@ -30,12 +30,12 @@
     </div>
         <form class="form-horizontal" method="POST" action="">
         <div class="form-group form-group-lg">
-          <label class="col-sm-1">What changed?</label>
+          <label class="col-sm-1">Notitie</label>
           <div class="col-md-11">
             <div class="input-group">
               <input name="email" class="form-control" type="text" id="formGroupInputLarge" style="height: 45px;">
               <span class="input-group-btn">
-                <button class="btn btn-default btn-lg" type="submit">Save</button>
+                <button class="btn btn-default btn-lg" type="submit">Opslaan</button>
               </span>
             </div>
           </div>
@@ -51,22 +51,13 @@
   <div class="container">
     <div class="row klax-spacer-md">
       <div class="col-md-12">
-        <h4>Activity</h4>
+        <h4>Overzicht</h4>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 klax-spacer-md">
         <h2><%= @snapshots.count %></h2>
         <p class="lead">total times the item has changed since you started watching it, which was <%= @page.created_at.strftime("%A, %B %d, %Y at %H:%M") %>.</p>
-      </div>
-      <div class="col-md-3 klax-spacer-md">
-        <h2>TK%</h2>
-        <p class="lead">is the average amount of the item that changes.</p>
-      </div>
-      <div class="col-md-3 klax-spacer-md">
-        <h2>TK hours</h2>
-        <!-- <%= @page.snapshot_time_deltas.to_json %><br> -->
-        <p class="lead">amount of time, roughly, between each change. We anticipate the next change will occur on Xxxxxx.</p>
       </div>
       <div class="col-md-3 klax-spacer-md">
         <h2><%= time_ago_in_words @before.created_at %></h2>
