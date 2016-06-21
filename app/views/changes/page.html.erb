@@ -25,7 +25,7 @@
   <div class="container klax-spacer-md">
     <div class="row klax-spacer-md">
       <div class="col-md-12">
-        <h4>Snapshots vergelijken van <code class="klax-code-after"><%= @after.created_at.strftime("%A, %B %d, %Y at %H:%M") %></code> and <code class="klax-code-before"><%= @before.created_at.strftime("%A, %B %d, %Y at %H:%M") %></code></h4>
+        <h4>Snapshots from <code class="klax-code-after"><%= @after.created_at.strftime("%A, %B %d, %Y at %H:%M") %></code> and <code class="klax-code-before"><%= @before.created_at.strftime("%A, %B %d, %Y at %H:%M") %></code></h4>
       </div>
     </div>
         <form class="form-horizontal" method="POST" action="">
@@ -57,7 +57,7 @@
     <div class="row">
       <div class="col-md-3 klax-spacer-md">
         <h2><%= @snapshots.count %></h2>
-        <p class="lead">totaal aantal keer dat de pagina is gewijzigd sinds ze in de gaten gehouden wordt (vanaf <%= @page.created_at.strftime("%d/%m/%y") %>).</p>
+        <p class="lead">total times the item has changed since you started watching it, which was <%= @page.created_at.strftime("%A, %B %d, %Y at %H:%M") %>.</p>
       </div>
       <div class="col-md-3 klax-spacer-md">
         <h2><%= time_ago_in_words @before.created_at %></h2>
