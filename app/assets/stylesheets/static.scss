@@ -305,7 +305,13 @@ a.btn:hover{
 div.jumbotron, a.btn-block, h1, h2, h4{
   border-color: #8FA1CB;
 }
+div.klax-hero{
+  background-color: #8FA1CB;
+}
 code{
   color: #212d5b;
   background-color: rgba(33, 45, 91, 0.1);
+}
+.navbar-header svg path, .navbar-brand svg path{
+    fill: #fff;
 }
